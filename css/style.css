@@ -1,0 +1,496 @@
+/* ============================================
+   REDBOX OFFICIAL STORE - Custom Stylesheet
+   Premium Fashion Kids & Teens - Blog Style
+   Professional Edition v2
+   ============================================ */
+
+/* ---- CSS Reset & Base ---- */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Remove default outline on focus but keep accessibility */
+:focus-visible {
+  outline: 2px solid #dc2626;
+  outline-offset: 2px;
+}
+
+/* ---- Scrollbar Styling - Premium ---- */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FAF7F2;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1A1A1A15;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1A1A1A30;
+}
+
+/* ---- Preloader ---- */
+#preloader {
+  pointer-events: auto;
+}
+
+#preloader.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.preloader-bar {
+  width: 0%;
+  animation: preloaderFill 1.5s ease-in-out forwards;
+}
+
+@keyframes preloaderFill {
+  0% { width: 0%; }
+  50% { width: 70%; }
+  100% { width: 100%; }
+}
+
+body.loaded #preloader {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.7s ease;
+}
+
+/* ---- Header Scroll Effect - Premium ---- */
+#mainHeader {
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#mainHeader.scrolled {
+  background-color: rgba(255, 255, 255, 0.97) !important;
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.06);
+}
+
+#mainHeader.scrolled .logo-container {
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+#mainHeader.scrolled .nav-link {
+  color: rgba(26, 26, 26, 0.7);
+}
+
+#mainHeader.scrolled .nav-link:hover {
+  color: #dc2626;
+}
+
+/* ---- Logo Container ---- */
+.logo-container {
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ---- Hamburger Menu Icon ---- */
+.hamburger-icon {
+  width: 20px;
+  height: 14px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hamburger-line {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #1A1A1A;
+  border-radius: 2px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-origin: center;
+}
+
+.hamburger-line.top {
+  transform: translateY(0) rotate(0deg);
+}
+
+.hamburger-line.mid {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+.hamburger-line.bot {
+  transform: translateY(0) rotate(0deg);
+}
+
+/* Hamburger Active State (X) */
+.hamburger-active .hamburger-line.top {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.hamburger-active .hamburger-line.mid {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.hamburger-active .hamburger-line.bot {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+/* Scrolled state changes hamburger color */
+#mainHeader.scrolled .hamburger-line {
+  background-color: #1A1A1A;
+}
+
+/* ---- Mobile Menu Overlay - Premium ---- */
+.mobile-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(26, 26, 26, 0.6);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.mobile-menu-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+  z-index: 40;
+}
+
+.mobile-menu-panel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 85%;
+  max-width: 380px;
+  height: 100vh;
+  background-color: #FFFFFF;
+  transform: translateX(100%);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-y: auto;
+}
+
+.mobile-menu-overlay.active .mobile-menu-panel {
+  transform: translateX(0);
+}
+
+/* ---- Mobile Nav Link ---- */
+.mobile-nav-link {
+  display: flex;
+  align-items: center;
+  padding: 14px 16px;
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #1A1A1A;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  background: none;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+}
+
+.mobile-nav-link:hover,
+.mobile-nav-link:active {
+  background-color: #FAF7F2;
+  color: #dc2626;
+}
+
+/* ---- Marquee Trust Bar ---- */
+.marquee-container {
+  overflow: hidden;
+  width: 100%;
+}
+
+.marquee-content {
+  display: flex;
+  animation: marqueeScroll 30s linear infinite;
+  width: max-content;
+}
+
+@keyframes marqueeScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* ---- Lookbook Card - Premium ---- */
+.lookbook-card {
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.lookbook-card:hover {
+  transform: translateY(-4px);
+}
+
+.lookbook-card .aspect-\[4\/3\] {
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.lookbook-card:hover .aspect-\[4\/3\] {
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
+}
+
+/* ---- Lookbook Image Hover Zoom ---- */
+.lookbook-card img {
+  transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ---- Tag Pill ---- */
+.tag-pill {
+  display: inline-block;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #8A8A8A;
+  background: #FAF7F2;
+  padding: 6px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(26, 26, 26, 0.05);
+  font-weight: 600;
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.tag-pill:hover {
+  background: #1A1A1A;
+  color: #FFFFFF;
+  border-color: #1A1A1A;
+}
+
+/* ---- Blog Card Image ---- */
+article img {
+  transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ---- Size Guide Modal ---- */
+#sizeGuideModal.active {
+  display: block !important;
+}
+
+#sizeGuideModal .absolute.inset-0.flex {
+  animation: modalFadeIn 0.3s ease;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#sizeGuideModal.active > div:last-child > div {
+  animation: modalSlideUp 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes modalSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---- Size Guide Tabs - Premium ---- */
+.size-tab {
+  color: #8A8A8A;
+  background-color: transparent;
+  border: 1.5px solid #1A1A1A10;
+  cursor: pointer;
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+.size-tab:hover {
+  color: #1A1A1A;
+  border-color: #1A1A1A30;
+}
+
+.size-tab.active {
+  color: #FFFFFF;
+  background-color: #1A1A1A;
+  border-color: #1A1A1A;
+}
+
+/* ---- Back to Top Button ---- */
+#backToTopBtn.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ---- Selection Styling ---- */
+::selection {
+  background-color: #dc2626;
+  color: #FFFFFF;
+}
+
+::-moz-selection {
+  background-color: #dc2626;
+  color: #FFFFFF;
+}
+
+/* ---- Smooth Section Transitions ---- */
+section {
+  position: relative;
+}
+
+/* ---- Responsive Table for Size Guide ---- */
+@media (max-width: 400px) {
+  #sizeGuideModal table {
+    font-size: 12px;
+  }
+
+  #sizeGuideModal th,
+  #sizeGuideModal td {
+    padding: 8px 4px;
+  }
+}
+
+/* ---- Print Styles ---- */
+@media print {
+  header,
+  #backToTopBtn,
+  .fixed,
+  #preloader {
+    display: none !important;
+  }
+
+  body {
+    background: white;
+    color: black;
+  }
+
+  section {
+    break-inside: avoid;
+  }
+}
+
+/* ---- Loading Animation for Images ---- */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* ---- Link underline effect - Premium ---- */
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #dc2626;
+  transition: width 0.3s ease;
+  border-radius: 1px;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* ---- Decorative Divider ---- */
+.section-divider {
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, #dc2626, #f87171);
+  margin: 0 auto;
+  border-radius: 1px;
+}
+
+/* ---- Body No Scroll when modal is open ---- */
+body.no-scroll {
+  overflow: hidden;
+}
+
+/* ---- Image Loading Placeholder - Premium ---- */
+img {
+  background-color: #FAF7F2;
+}
+
+img[loading="lazy"] {
+  background: linear-gradient(110deg, #FAF7F2 8%, #f5f0e8 18%, #FAF7F2 33%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s linear infinite;
+}
+
+/* ---- Hero Image ---- */
+#home img[loading="eager"] {
+  background: linear-gradient(135deg, #1A1A1A, #450a0a);
+  animation: none;
+}
+
+/* ---- Border Width for About Section ---- */
+.border-l-3 {
+  border-left-width: 3px;
+}
+
+/* ---- Floating Button Premium Glow ---- */
+[onclick="openSizeGuide()"].fixed {
+  box-shadow: 0 8px 32px rgba(26, 26, 26, 0.3);
+}
+
+[onclick="openSizeGuide()"].fixed:hover {
+  box-shadow: 0 8px 32px rgba(220, 38, 38, 0.4);
+}
+
+/* ---- Custom header height ---- */
+.h-18 {
+  height: 4.5rem;
+}
+.h-22 {
+  height: 5.5rem;
+}
+
+/* ---- Accessibility: Reduced Motion ---- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ---- Responsive: Mobile Tweaks ---- */
+@media (max-width: 640px) {
+  .lookbook-card:hover {
+    transform: translateY(-2px);
+  }
+}
