@@ -131,30 +131,10 @@
   };
 
   // ============================================
-  // SIZE GUIDE TABS
+  // SIZE GUIDE TABS - handled by inline switchCat() in HTML
   // ============================================
-  var sizeTabs = document.querySelectorAll('.size-tab');
-  var tabAnak = document.getElementById('tabAnak');
-  var tabRemaja = document.getElementById('tabRemaja');
-
-  sizeTabs.forEach(function (tab) {
-    tab.addEventListener('click', function () {
-      sizeTabs.forEach(function (t) {
-        t.classList.remove('active');
-      });
-      this.classList.add('active');
-
-      var targetTab = this.getAttribute('data-tab');
-
-      if (targetTab === 'anak') {
-        tabAnak.classList.remove('hidden');
-        tabRemaja.classList.add('hidden');
-      } else if (targetTab === 'remaja') {
-        tabAnak.classList.add('hidden');
-        tabRemaja.classList.remove('hidden');
-      }
-    });
-  });
+  // The new size guide uses inline onclick="switchCat(this, catId)" 
+  // function defined in the HTML. No JS IIFE tab logic needed.
 
   // ============================================
   // BACK TO TOP BUTTON
@@ -221,8 +201,8 @@
     });
   }, observerOptions);
 
-  // Observe sections for fade-in effect
-  document.querySelectorAll('section').forEach(function (section) {
+  // Observe sections for fade-in effect (skip hero - it's always visible)
+  document.querySelectorAll('section:not(#home)').forEach(function (section) {
     section.style.opacity = '0';
     section.style.transform = 'translateY(30px)';
     section.style.transition = 'opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
@@ -236,11 +216,11 @@
     heroSection.style.transform = 'translateY(0)';
   }
 
-  // Observe lookbook cards for staggered fade-in
-  document.querySelectorAll('.lookbook-card').forEach(function (card, index) {
+  // Observe category cards for staggered fade-in
+  document.querySelectorAll('.category-card').forEach(function (card, index) {
     card.style.opacity = '0';
-    card.style.transform = 'translateY(40px)';
-    card.style.transition = 'opacity 0.9s cubic-bezier(0.4, 0, 0.2, 1) ' + (index * 0.12) + 's, transform 0.9s cubic-bezier(0.4, 0, 0.2, 1) ' + (index * 0.12) + 's';
+    card.style.transform = 'translateY(30px)';
+    card.style.transition = 'opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1) ' + (index * 0.1) + 's, transform 0.8s cubic-bezier(0.4, 0, 0.2, 1) ' + (index * 0.1) + 's';
 
     var cardObserver = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
@@ -250,28 +230,28 @@
           cardObserver.unobserve(entry.target);
         }
       });
-    }, { rootMargin: '0px 0px -80px 0px', threshold: 0.1 });
+    }, { rootMargin: '0px 0px -60px 0px', threshold: 0.1 });
 
     cardObserver.observe(card);
   });
 
-  // Observe blog cards for staggered fade-in
-  document.querySelectorAll('article').forEach(function (card, index) {
+  // Observe lookbook cards for staggered fade-in (category editorial cards)
+  document.querySelectorAll('.lookbook-card').forEach(function (card, index) {
     card.style.opacity = '0';
     card.style.transform = 'translateY(30px)';
-    card.style.transition = 'opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1) ' + (index * 0.1) + 's, transform 0.8s cubic-bezier(0.4, 0, 0.2, 1) ' + (index * 0.1) + 's';
+    card.style.transition = 'opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1) ' + (index * 0.15) + 's, transform 0.8s cubic-bezier(0.4, 0, 0.2, 1) ' + (index * 0.15) + 's';
 
-    var articleObserver = new IntersectionObserver(function (entries) {
+    var cardObserver = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (entry.isIntersecting) {
           entry.target.style.opacity = '1';
           entry.target.style.transform = 'translateY(0)';
-          articleObserver.unobserve(entry.target);
+          cardObserver.unobserve(entry.target);
         }
       });
     }, { rootMargin: '0px 0px -60px 0px', threshold: 0.1 });
 
-    articleObserver.observe(card);
+    cardObserver.observe(card);
   });
 
   // ============================================
