@@ -494,3 +494,26 @@ img[loading="lazy"] {
     transform: translateY(-2px);
   }
 }
+
+/* ---- Size Guide Intro Banner ---- */
+#sizeGuideBanner {
+  transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1), transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#sizeGuideBanner.opacity-100 {
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+
+#sizeGuideBanner.translate-y-0 {
+  transform: translateY(0) !important;
+}
+
+/* ---- Size FAB enhanced shadow glow ---- */
+#sizeFab {
+  box-shadow: 0 8px 32px rgba(220, 38, 38, 0.35), 0 2px 8px rgba(220, 38, 38, 0.2);
+}
+
+#sizeFab:hover {
+  box-shadow: 0 12px 40px rgba(220, 38, 38, 0.5), 0 4px 12px rgba(220, 38, 38, 0.3);
+}
