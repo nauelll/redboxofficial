@@ -1,8 +1,17 @@
 /* ============================================
    REDBOX OFFICIAL STORE - Custom Stylesheet
-   Premium Fashion Kids & Teens - Blog Style
-   Professional Edition v2
+   Premium Fashion Kids & Teens - Editorial Edition
+   Professional Edition v3 — Refined UI Pass
    ============================================ */
+
+/* ---- Design Tokens ---- */
+:root {
+  --shadow-soft: 0 2px 8px rgba(26, 26, 26, 0.04), 0 1px 2px rgba(26, 26, 26, 0.03);
+  --shadow-card: 0 8px 24px rgba(26, 26, 26, 0.06), 0 2px 6px rgba(26, 26, 26, 0.04);
+  --shadow-card-hover: 0 24px 48px rgba(26, 26, 26, 0.12), 0 8px 16px rgba(26, 26, 26, 0.06);
+  --shadow-red: 0 12px 32px rgba(220, 38, 38, 0.22);
+  --ease-premium: cubic-bezier(0.16, 1, 0.3, 1);
+}
 
 /* ---- CSS Reset & Base ---- */
 *, *::before, *::after {
@@ -18,6 +27,14 @@ html {
 
 body {
   overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ---- Refined Heading Tracking ---- */
+.font-display {
+  letter-spacing: -0.01em;
 }
 
 /* Remove default outline on focus but keep accessibility */
@@ -73,18 +90,18 @@ body.loaded #preloader {
 
 /* ---- Header Scroll Effect - Premium ---- */
 #mainHeader {
-  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.5s var(--ease-premium);
 }
 
 #mainHeader.scrolled {
   background-color: rgba(255, 255, 255, 0.97) !important;
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 1px 0 rgba(26, 26, 26, 0.06), 0 12px 30px rgba(26, 26, 26, 0.05);
 }
 
 #mainHeader.scrolled .logo-container {
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: var(--shadow-soft);
 }
 
 #mainHeader.scrolled .nav-link {
@@ -238,47 +255,85 @@ body.loaded #preloader {
 
 /* ---- Lookbook Card - Premium ---- */
 .lookbook-card {
-  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.5s var(--ease-premium);
 }
 
 .lookbook-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-6px);
+}
+
+.lookbook-card .rounded-2xl.border.border-charcoal\/5 {
+  box-shadow: var(--shadow-card);
+  transition: box-shadow 0.6s var(--ease-premium), transform 0.6s var(--ease-premium);
+}
+
+.lookbook-card:hover .rounded-2xl.border.border-charcoal\/5 {
+  box-shadow: var(--shadow-card-hover);
 }
 
 .lookbook-card .aspect-\[4\/3\] {
-  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.6s var(--ease-premium);
 }
 
 .lookbook-card:hover .aspect-\[4\/3\] {
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-card-hover);
 }
 
 /* ---- Lookbook Image Hover Zoom ---- */
 .lookbook-card img {
-  transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.8s var(--ease-premium);
 }
 
-/* ---- Tag Pill ---- */
+/* Subtle inner shade on category images for depth */
+.lookbook-card .relative.overflow-hidden.rounded-2xl::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  box-shadow: inset 0 0 0 1px rgba(26, 26, 26, 0.04);
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+/* ---- Tag Pill - Refined ---- */
 .tag-pill {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   font-size: 10px;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: #8A8A8A;
-  background: #FAF7F2;
-  padding: 6px 14px;
-  border-radius: 10px;
-  border: 1px solid rgba(26, 26, 26, 0.05);
+  color: #6B6B6B;
+  background: #FFFFFF;
+  padding: 7px 15px;
+  border-radius: 999px;
+  border: 1px solid rgba(26, 26, 26, 0.08);
   font-weight: 600;
   font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
-  transition: all 0.3s ease;
+  transition: all 0.3s var(--ease-premium);
   cursor: default;
+  box-shadow: var(--shadow-soft);
 }
 
 .tag-pill:hover {
   background: #1A1A1A;
   color: #FFFFFF;
   border-color: #1A1A1A;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(26, 26, 26, 0.18);
+}
+
+/* ---- Premium Buttons: consistent elevation on primary CTAs ---- */
+a.bg-redbox-600, button.bg-redbox-600 {
+  box-shadow: 0 4px 14px rgba(220, 38, 38, 0.18);
+}
+
+a.bg-redbox-600:hover, button.bg-redbox-600:hover {
+  box-shadow: var(--shadow-red);
+}
+
+/* ---- Section eyebrow refinement ---- */
+section p.text-redbox-600.tracking-\[0\.3em\],
+section p.text-redbox-600.tracking-\[0\.3em\] + h2 + p {
+  position: relative;
 }
 
 /* ---- Blog Card Image ---- */
@@ -305,7 +360,8 @@ article img {
 }
 
 #sizeGuideModal.active > div:last-child > div {
-  animation: modalSlideUp 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: modalSlideUp 0.45s var(--ease-premium);
+  box-shadow: 0 32px 64px rgba(26, 26, 26, 0.25), 0 8px 24px rgba(26, 26, 26, 0.12);
 }
 
 @keyframes modalSlideUp {
@@ -516,4 +572,212 @@ img[loading="lazy"] {
 
 #sizeFab:hover {
   box-shadow: 0 12px 40px rgba(220, 38, 38, 0.5), 0 4px 12px rgba(220, 38, 38, 0.3);
+}
+
+/* ============================================
+   PROFESSIONAL UI DETAIL PASS — v3 additions
+   ============================================ */
+
+/* ---- Floating badges on hero: crisper depth ---- */
+#home .absolute.bg-redbox-600,
+#home .absolute.bg-white,
+#home .absolute.bg-charcoal\/90 {
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.18);
+}
+
+/* ---- Hero portrait frame refinement ---- */
+#home .aspect-\[3\/4\] {
+  box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.06);
+}
+
+/* ---- Stat / number blocks (About section) crisper ---- */
+.border-l-3.border-redbox-600 {
+  transition: border-color 0.3s ease;
+}
+
+/* ---- Marquee: soft edge fade so it reads as premium, not clipped ---- */
+.marquee-container {
+  mask-image: linear-gradient(90deg, transparent 0, #000 6%, #000 94%, transparent 100%);
+  -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 6%, #000 94%, transparent 100%);
+}
+
+/* ---- Divider dot: subtle ring ---- */
+.w-2\.5.h-2\.5.bg-redbox-600.rounded-full {
+  box-shadow: 0 0 0 4px rgba(220, 38, 38, 0.12);
+}
+
+/* ---- Category badge label depth ---- */
+.absolute.top-5.left-5.bg-redbox-600\/90,
+.absolute.top-5.left-5.bg-charcoal\/90 {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
+}
+
+/* ---- Footer links: refined underline-on-hover micro interaction ---- */
+footer a {
+  position: relative;
+}
+
+footer ul a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 1px;
+  background: currentColor;
+  transition: width 0.3s var(--ease-premium);
+}
+
+footer ul a:hover::after {
+  width: 100%;
+}
+
+/* ---- Size guide banner: crisper card elevation ---- */
+#sizeGuideBanner .bg-white.rounded-2xl {
+  box-shadow: 0 20px 40px rgba(26, 26, 26, 0.16), 0 4px 12px rgba(26, 26, 26, 0.08);
+}
+
+/* ---- Size category tab buttons: refined active/inactive states ---- */
+.size-cat-tab {
+  transition: all 0.25s var(--ease-premium);
+}
+
+/* ---- Table refinement inside size guide ---- */
+#sizeGuideModal table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+#sizeGuideModal thead th:first-child {
+  border-top-left-radius: 10px;
+}
+
+#sizeGuideModal thead th:last-child {
+  border-top-right-radius: 10px;
+}
+
+/* ---- Focus rings for interactive cards/buttons (a11y + polish) ---- */
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid #dc2626;
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* ---- Hover state on Belanja CTA in nav: subtle press feedback ---- */
+nav a[href*="shopee"]:active,
+nav a[href*="tokopedia"]:active {
+  transform: translateY(0) scale(0.98);
+}
+
+/* ---- Section divider polish: gradient hairlines instead of flat ---- */
+.flex.items-center.gap-4 > .flex-1.h-px.bg-charcoal\/8 {
+  background: linear-gradient(90deg, transparent, rgba(26, 26, 26, 0.12), transparent);
+}
+
+/* ---- Image placeholder refinement (loading state) ---- */
+img {
+  background-color: #FAF7F2;
+}
+
+/* ============================================
+   NEW CONVERSION-FOCUSED SECTIONS — v4
+   ============================================ */
+
+/* ---- Promo Bar Marquee ---- */
+.promo-marquee-content {
+  animation: marqueeScroll 22s linear infinite;
+  width: max-content;
+}
+
+/* ---- Value Props Cards ---- */
+.value-card {
+  padding: 18px;
+  border-radius: 16px;
+  transition: all 0.3s var(--ease-premium);
+}
+
+.value-card:hover {
+  background: #FAF7F2;
+  transform: translateY(-2px);
+}
+
+/* ---- Testimonial Cards ---- */
+.testi-card {
+  background: #FFFFFF;
+  border: 1px solid rgba(26, 26, 26, 0.06);
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: var(--shadow-card);
+  transition: all 0.4s var(--ease-premium);
+}
+
+.testi-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+/* ---- FAQ Accordion ---- */
+.faq-item {
+  background: #FFFFFF;
+  border: 1px solid rgba(26, 26, 26, 0.06);
+  border-radius: 14px;
+  padding: 18px 22px;
+  box-shadow: var(--shadow-soft);
+}
+
+.faq-item summary {
+  cursor: pointer;
+  list-style: none;
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: #1A1A1A;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::after {
+  content: '+';
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #FAF7F2;
+  color: #dc2626;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 700;
+  transition: transform 0.3s var(--ease-premium);
+}
+
+.faq-item[open] summary::after {
+  transform: rotate(45deg);
+}
+
+.faq-item p {
+  margin-top: 14px;
+  font-size: 13.5px;
+  line-height: 1.7;
+  color: #6B6B6B;
+}
+
+/* ---- Sticky mobile buy bar: ensure body content clears it ---- */
+@media (max-width: 1023px) {
+  body {
+    padding-bottom: 64px;
+  }
+}
+
+/* ---- Bestseller / favorite ribbon polish ---- */
+.absolute.top-5.right-5.bg-charcoal {
+  letter-spacing: 0.1em;
 }
