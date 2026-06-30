@@ -73,9 +73,25 @@
   </div>
 
   <!-- ============================================ -->
+  <!-- ANNOUNCEMENT / PROMO BAR                      -->
+  <!-- ============================================ -->
+  <div id="promoBar" class="fixed top-0 left-0 w-full z-[60] bg-charcoal text-white h-9 flex items-center overflow-hidden">
+    <div class="promo-marquee-container w-full">
+      <div class="promo-marquee-content flex items-center whitespace-nowrap">
+        <span class="inline-flex items-center gap-2 text-[11px] sm:text-xs font-semibold tracking-wide mx-6">🔥 Diskon spesial hari ini — langsung checkout di Shopee &amp; Tokopedia</span>
+        <span class="inline-flex items-center gap-2 text-[11px] sm:text-xs font-semibold tracking-wide mx-6">⭐ Star+ Seller · 27.5K+ Followers · 100% Original</span>
+        <span class="inline-flex items-center gap-2 text-[11px] sm:text-xs font-semibold tracking-wide mx-6">🚚 Gratis ongkir syarat &amp; ketentuan berlaku di marketplace</span>
+        <span class="inline-flex items-center gap-2 text-[11px] sm:text-xs font-semibold tracking-wide mx-6">🔥 Diskon spesial hari ini — langsung checkout di Shopee &amp; Tokopedia</span>
+        <span class="inline-flex items-center gap-2 text-[11px] sm:text-xs font-semibold tracking-wide mx-6">⭐ Star+ Seller · 27.5K+ Followers · 100% Original</span>
+        <span class="inline-flex items-center gap-2 text-[11px] sm:text-xs font-semibold tracking-wide mx-6">🚚 Gratis ongkir syarat &amp; ketentuan berlaku di marketplace</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================ -->
   <!-- HEADER / NAVIGASI                            -->
   <!-- ============================================ -->
-  <header id="mainHeader" class="fixed top-0 left-0 w-full z-50 transition-all duration-500 bg-white/0">
+  <header id="mainHeader" class="fixed top-9 left-0 w-full z-50 transition-all duration-500 bg-white/0">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-20 sm:h-24">
 
@@ -202,13 +218,19 @@
             Koleksi baju anak &amp; remaja pilihan dengan desain eksklusif dan kualitas terbaik. Karena setiap anak layak tampil istimewa.
           </p>
           <div class="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
-            <a href="https://shopee.co.id/redbox_officialstore" target="_blank" rel="noopener noreferrer" class="group w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-redbox-600 text-white px-8 py-4 text-sm font-bold tracking-[0.15em] uppercase rounded-xl hover:bg-redbox-500 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-redbox-600/30">
-              Shopee Star+
-              <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            <a href="https://shopee.co.id/redbox_officialstore" target="_blank" rel="noopener noreferrer" class="group w-full sm:w-auto inline-flex flex-col items-center sm:items-start gap-0.5 bg-redbox-600 text-white px-8 py-4 rounded-xl hover:bg-redbox-500 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-redbox-600/30">
+              <span class="inline-flex items-center gap-3 text-sm font-bold tracking-[0.15em] uppercase">
+                Belanja di Shopee
+                <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+              </span>
+              <span class="text-[10px] text-white/70 tracking-wide normal-case font-medium">⭐ Star+ Seller · Cek promo hari ini</span>
             </a>
-            <a href="https://www.tokopedia.com/redbox-official" target="_blank" rel="noopener noreferrer" class="group w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-white/10 backdrop-blur text-white border border-white/20 px-8 py-4 text-sm font-bold tracking-[0.15em] uppercase rounded-xl hover:bg-white hover:text-charcoal transition-all duration-300 hover:-translate-y-1">
-              Tokopedia
-              <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            <a href="https://www.tokopedia.com/redbox-official" target="_blank" rel="noopener noreferrer" class="group w-full sm:w-auto inline-flex flex-col items-center sm:items-start gap-0.5 bg-white/10 backdrop-blur text-white border border-white/20 px-8 py-4 rounded-xl hover:bg-white hover:text-charcoal transition-all duration-300 hover:-translate-y-1">
+              <span class="inline-flex items-center gap-3 text-sm font-bold tracking-[0.15em] uppercase">
+                Belanja di Tokopedia
+                <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+              </span>
+              <span class="text-[10px] text-white/70 group-hover:text-charcoal/60 tracking-wide normal-case font-medium">Pengiriman cepat ke seluruh Indonesia</span>
             </a>
           </div>
           <!-- Trust Badge -->
@@ -241,7 +263,7 @@
               <div class="absolute inset-0 bg-gradient-to-t from-charcoal/40 via-transparent to-transparent"></div>
             </div>
             <!-- Floating Badge: New Collection -->
-            <div class="absolute -bottom-4 -right-2 sm:-bottom-5 sm:-right-4 bg-redbox-600 text-white px-4 py-2.5 sm:px-5 sm:py-3 rounded-xl shadow-2xl shadow-redbox-600/30 border border-redbox-500/30">
+            <div class="absolute -bottom-4 -left-2 sm:-bottom-5 sm:-left-4 bg-redbox-600 text-white px-4 py-2.5 sm:px-5 sm:py-3 rounded-xl shadow-2xl shadow-redbox-600/30 border border-redbox-500/30">
               <p class="text-[8px] sm:text-[9px] tracking-[0.2em] uppercase opacity-80 font-medium">New Collection</p>
               <p class="font-display text-lg sm:text-xl font-bold mt-0.5">2026</p>
             </div>
@@ -253,7 +275,7 @@
               </div>
             </div>
             <!-- Floating Badge: Star+ -->
-            <div class="absolute top-3/4 -left-3 sm:-left-8 bg-charcoal/90 backdrop-blur text-white px-4 py-2.5 rounded-xl shadow-xl border border-white/10">
+            <div class="absolute top-1/4 -left-5 sm:-left-8 bg-charcoal/90 backdrop-blur text-white px-4 py-2.5 rounded-xl shadow-xl border border-white/10">
               <div class="flex items-center gap-2">
                 <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
                 <span class="text-xs font-bold tracking-wider">STAR+</span>
@@ -291,6 +313,44 @@
   </div>
 
   <!-- ============================================ -->
+  <!-- SECTION: KENAPA PILIH REDBOX (Trust/Value)   -->
+  <!-- ============================================ -->
+  <section class="bg-white py-14 sm:py-20 border-b border-charcoal/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
+        <div class="value-card group">
+          <div class="w-12 h-12 rounded-xl bg-redbox-50 flex items-center justify-center mb-4 group-hover:bg-redbox-600 transition-colors duration-300">
+            <svg class="w-6 h-6 text-redbox-600 group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <p class="font-display text-base sm:text-lg font-bold text-charcoal mb-1.5">100% Original</p>
+          <p class="text-warmgray text-xs sm:text-sm leading-relaxed">Setiap produk melewati quality check ketat sebelum sampai ke tanganmu.</p>
+        </div>
+        <div class="value-card group">
+          <div class="w-12 h-12 rounded-xl bg-redbox-50 flex items-center justify-center mb-4 group-hover:bg-redbox-600 transition-colors duration-300">
+            <svg class="w-6 h-6 text-redbox-600 group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          </div>
+          <p class="font-display text-base sm:text-lg font-bold text-charcoal mb-1.5">Pengiriman Cepat</p>
+          <p class="text-warmgray text-xs sm:text-sm leading-relaxed">Diproses same-day untuk order sebelum jam 3 sore, sampai ke seluruh Indonesia.</p>
+        </div>
+        <div class="value-card group">
+          <div class="w-12 h-12 rounded-xl bg-redbox-50 flex items-center justify-center mb-4 group-hover:bg-redbox-600 transition-colors duration-300">
+            <svg class="w-6 h-6 text-redbox-600 group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          </div>
+          <p class="font-display text-base sm:text-lg font-bold text-charcoal mb-1.5">Star+ Seller</p>
+          <p class="text-warmgray text-xs sm:text-sm leading-relaxed">Status resmi Shopee Star+ — bukti rating &amp; pelayanan terpercaya.</p>
+        </div>
+        <div class="value-card group">
+          <div class="w-12 h-12 rounded-xl bg-redbox-50 flex items-center justify-center mb-4 group-hover:bg-redbox-600 transition-colors duration-300">
+            <svg class="w-6 h-6 text-redbox-600 group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          </div>
+          <p class="font-display text-base sm:text-lg font-bold text-charcoal mb-1.5">Mudah Ditanya</p>
+          <p class="text-warmgray text-xs sm:text-sm leading-relaxed">Fast response chat &amp; panduan ukuran otomatis agar tidak salah beli.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
   <!-- SECTION: KATEGORI PRODUK                     -->
   <!-- ============================================ -->
   <section id="koleksi" class="py-24 sm:py-32 bg-white">
@@ -310,12 +370,21 @@
         <div class="lookbook-card group">
           <div class="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
             <div class="relative overflow-hidden rounded-2xl border border-charcoal/5 shadow-lg group-hover:shadow-2xl transition-shadow duration-500">
-              <img src="assets/img/categories/4.png" alt="Short Sleeve T-Shirt - REDBOX" class="w-full h-auto object-contain group-hover:scale-105 transition-transform duration-700" loading="lazy" />
-              
+              <img src="assets/img/categories/1.PNG" alt="Short Sleeve T-Shirt - REDBOX" class="w-full h-auto object-contain group-hover:scale-105 transition-transform duration-700" loading="lazy" />
+              <div class="absolute top-5 left-5 bg-redbox-600/90 backdrop-blur text-white text-[9px] tracking-[0.2em] uppercase px-4 py-2 rounded-lg font-semibold">Kategori</div>
+              <div class="absolute top-5 right-5 bg-charcoal text-white text-[9px] tracking-[0.15em] uppercase px-3.5 py-2 rounded-lg font-bold shadow-lg flex items-center gap-1.5">
+                <svg class="w-3 h-3 text-yellow-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                Best Seller
+              </div>
             </div>
             <div class="lg:pl-6">
               <p class="text-redbox-600 text-xs tracking-[0.3em] uppercase font-semibold mb-4">Unisex · Anak & Remaja</p>
-              <h3 class="font-display text-2xl sm:text-3xl lg:text-4xl font-bold text-charcoal mb-5 leading-tight">Short Sleeve<br/>T-Shirt</h3>
+              <h3 class="font-display text-2xl sm:text-3xl lg:text-4xl font-bold text-charcoal mb-3 leading-tight">Short Sleeve<br/>T-Shirt</h3>
+              <div class="flex items-center gap-3 mb-5">
+                <span class="inline-flex items-center gap-1 text-xs font-semibold text-charcoal"><svg class="w-3.5 h-3.5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg> 4.9/5</span>
+                <span class="w-1 h-1 rounded-full bg-warmgray/40"></span>
+                <span class="text-xs text-warmgray font-medium">Terjual 1.200+</span>
+              </div>
               <p class="text-warmgray text-base sm:text-lg leading-relaxed mb-8">Solusi tampil keren tanpa repot. Koleksi Basic Short Sleeve kami hadir untuk nemenin semua aktivitas harianmu. Simpel, rapi, dan gak pernah salah buat gaya apa aja.</p>
               <div class="flex flex-wrap gap-2 mb-8">
                 <span class="tag-pill">Nyaman Sehari-hari</span>
@@ -325,11 +394,11 @@
               </div>
               <div class="flex flex-col sm:flex-row gap-3">
                 <a href="https://shopee.co.id/redbox_officialstore" target="_blank" rel="noopener noreferrer" class="group/btn inline-flex items-center justify-center gap-2 bg-redbox-600 text-white px-7 py-3.5 text-xs font-bold tracking-[0.15em] uppercase rounded-xl hover:bg-redbox-700 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-redbox-600/20">
-                  Lihat di Shopee
+                  Beli di Shopee
                   <svg class="w-3.5 h-3.5 transition-transform duration-300 group-hover/btn:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
                 </a>
                 <a href="https://www.tokopedia.com/redbox-official" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 border-2 border-charcoal text-charcoal px-7 py-3.5 text-xs font-bold tracking-[0.15em] uppercase rounded-xl hover:bg-charcoal hover:text-white transition-all duration-300">
-                  Lihat di Tokopedia
+                  Beli di Tokopedia
                 </a>
               </div>
             </div>
@@ -347,12 +416,17 @@
         <div class="lookbook-card group">
           <div class="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
             <div class="lg:order-2 relative overflow-hidden rounded-2xl border border-charcoal/5 shadow-lg group-hover:shadow-2xl transition-shadow duration-500">
-              <img src="assets/img/categories/2.png" alt="Long Sleeve T-Shirt - REDBOX" class="w-full h-auto object-contain group-hover:scale-105 transition-transform duration-700" loading="lazy" />
-             
+              <img src="assets/img/categories/2.PNG" alt="Long Sleeve T-Shirt - REDBOX" class="w-full h-auto object-contain group-hover:scale-105 transition-transform duration-700" loading="lazy" />
+              <div class="absolute top-5 left-5 bg-charcoal/90 backdrop-blur text-white text-[9px] tracking-[0.2em] uppercase px-4 py-2 rounded-lg font-semibold">Kategori</div>
             </div>
             <div class="lg:order-1 lg:pr-6">
               <p class="text-charcoal/60 text-xs tracking-[0.3em] uppercase font-semibold mb-4">Unisex · Anak & Remaja</p>
-              <h3 class="font-display text-2xl sm:text-3xl lg:text-4xl font-bold text-charcoal mb-5 leading-tight">Long Sleeve<br/>T-Shirt</h3>
+              <h3 class="font-display text-2xl sm:text-3xl lg:text-4xl font-bold text-charcoal mb-3 leading-tight">Long Sleeve<br/>T-Shirt</h3>
+              <div class="flex items-center gap-3 mb-5">
+                <span class="inline-flex items-center gap-1 text-xs font-semibold text-charcoal"><svg class="w-3.5 h-3.5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg> 4.8/5</span>
+                <span class="w-1 h-1 rounded-full bg-warmgray/40"></span>
+                <span class="text-xs text-warmgray font-medium">Terjual 850+</span>
+              </div>
               <p class="text-warmgray text-base sm:text-lg leading-relaxed mb-8">Tampil Rapi Instan untuk Segala Usia. Pilihan terbaik untuk acara keluarga, jalan-jalan ke mall, atau momen formal pertama si remaja.</p>
               <div class="flex flex-wrap gap-2 mb-8">
                 <span class="tag-pill">Berbagai Desain</span>
@@ -362,11 +436,11 @@
               </div>
               <div class="flex flex-col sm:flex-row gap-3">
                 <a href="https://shopee.co.id/redbox_officialstore" target="_blank" rel="noopener noreferrer" class="group/btn inline-flex items-center justify-center gap-2 bg-redbox-600 text-white px-7 py-3.5 text-xs font-bold tracking-[0.15em] uppercase rounded-xl hover:bg-redbox-700 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-redbox-600/20">
-                  Lihat di Shopee
+                  Beli di Shopee
                   <svg class="w-3.5 h-3.5 transition-transform duration-300 group-hover/btn:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
                 </a>
                 <a href="https://www.tokopedia.com/redbox-official" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 border-2 border-charcoal text-charcoal px-7 py-3.5 text-xs font-bold tracking-[0.15em] uppercase rounded-xl hover:bg-charcoal hover:text-white transition-all duration-300">
-                  Lihat di Tokopedia
+                  Beli di Tokopedia
                 </a>
               </div>
             </div>
@@ -384,12 +458,17 @@
         <div class="lookbook-card group">
           <div class="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
             <div class="relative overflow-hidden rounded-2xl border border-charcoal/5 shadow-lg group-hover:shadow-2xl transition-shadow duration-500">
-              <img src="assets/img/categories/1.png" alt="Polo Shirt - REDBOX" class="w-full h-auto object-contain group-hover:scale-105 transition-transform duration-700" loading="lazy" />
-             
+              <img src="assets/img/categories/3.PNG" alt="Polo Shirt - REDBOX" class="w-full h-auto object-contain group-hover:scale-105 transition-transform duration-700" loading="lazy" />
+              <div class="absolute top-5 left-5 bg-redbox-600/90 backdrop-blur text-white text-[9px] tracking-[0.2em] uppercase px-4 py-2 rounded-lg font-semibold">Kategori</div>
             </div>
             <div class="lg:pl-6">
               <p class="text-redbox-600 text-xs tracking-[0.3em] uppercase font-semibold mb-4">Unisex · Anak & Remaja</p>
-              <h3 class="font-display text-2xl sm:text-3xl lg:text-4xl font-bold text-charcoal mb-5 leading-tight">Polo<br/>Shirt</h3>
+              <h3 class="font-display text-2xl sm:text-3xl lg:text-4xl font-bold text-charcoal mb-3 leading-tight">Polo<br/>Shirt</h3>
+              <div class="flex items-center gap-3 mb-5">
+                <span class="inline-flex items-center gap-1 text-xs font-semibold text-charcoal"><svg class="w-3.5 h-3.5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg> 4.9/5</span>
+                <span class="w-1 h-1 rounded-full bg-warmgray/40"></span>
+                <span class="text-xs text-redbox-600 font-semibold">Stok terbatas</span>
+              </div>
               <p class="text-warmgray text-base sm:text-lg leading-relaxed mb-8">Tampil Rapi Instan untuk Segala Usia. Pilihan terbaik untuk acara keluarga, jalan-jalan ke mall, atau momen formal pertama si remaja.</p>
               <div class="flex flex-wrap gap-2 mb-8">
                 <span class="tag-pill">Desain Kerah</span>
@@ -399,11 +478,11 @@
               </div>
               <div class="flex flex-col sm:flex-row gap-3">
                 <a href="https://shopee.co.id/redbox_officialstore" target="_blank" rel="noopener noreferrer" class="group/btn inline-flex items-center justify-center gap-2 bg-redbox-600 text-white px-7 py-3.5 text-xs font-bold tracking-[0.15em] uppercase rounded-xl hover:bg-redbox-700 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-redbox-600/20">
-                  Lihat di Shopee
+                  Beli di Shopee
                   <svg class="w-3.5 h-3.5 transition-transform duration-300 group-hover/btn:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
                 </a>
                 <a href="https://www.tokopedia.com/redbox-official" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 border-2 border-charcoal text-charcoal px-7 py-3.5 text-xs font-bold tracking-[0.15em] uppercase rounded-xl hover:bg-charcoal hover:text-white transition-all duration-300">
-                  Lihat di Tokopedia
+                  Beli di Tokopedia
                 </a>
               </div>
             </div>
@@ -421,12 +500,17 @@
         <div class="lookbook-card group">
           <div class="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
             <div class="lg:order-2 relative overflow-hidden rounded-2xl border border-charcoal/5 shadow-lg group-hover:shadow-2xl transition-shadow duration-500">
-              <img src="assets/img/categories/3.png" alt="Modest Wear - REDBOX" class="w-full h-auto object-contain group-hover:scale-105 transition-transform duration-700" loading="lazy" />
-             
+              <img src="assets/img/categories/4.PNG" alt="Modest Wear - REDBOX" class="w-full h-auto object-contain group-hover:scale-105 transition-transform duration-700" loading="lazy" />
+              <div class="absolute top-5 left-5 bg-charcoal/90 backdrop-blur text-white text-[9px] tracking-[0.2em] uppercase px-4 py-2 rounded-lg font-semibold">Kategori</div>
             </div>
             <div class="lg:order-1 lg:pr-6">
               <p class="text-charcoal/60 text-xs tracking-[0.3em] uppercase font-semibold mb-4">Unisex · Anak & Remaja</p>
-              <h3 class="font-display text-2xl sm:text-3xl lg:text-4xl font-bold text-charcoal mb-5 leading-tight">Modest<br/>Wear</h3>
+              <h3 class="font-display text-2xl sm:text-3xl lg:text-4xl font-bold text-charcoal mb-3 leading-tight">Modest<br/>Wear</h3>
+              <div class="flex items-center gap-3 mb-5">
+                <span class="inline-flex items-center gap-1 text-xs font-semibold text-charcoal"><svg class="w-3.5 h-3.5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg> 5.0/5</span>
+                <span class="w-1 h-1 rounded-full bg-warmgray/40"></span>
+                <span class="text-xs text-warmgray font-medium">Terjual 600+</span>
+              </div>
               <p class="text-warmgray text-base sm:text-lg leading-relaxed mb-8">Koleksi Modest Wear Anak & Remaja. Desain santun, modern, dan menggunakan bahan yang adem untuk kenyamanan sepanjang hari.</p>
               <div class="flex flex-wrap gap-2 mb-8">
                 <span class="tag-pill">Desain Santun</span>
@@ -436,11 +520,11 @@
               </div>
               <div class="flex flex-col sm:flex-row gap-3">
                 <a href="https://shopee.co.id/redbox_officialstore" target="_blank" rel="noopener noreferrer" class="group/btn inline-flex items-center justify-center gap-2 bg-redbox-600 text-white px-7 py-3.5 text-xs font-bold tracking-[0.15em] uppercase rounded-xl hover:bg-redbox-700 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-redbox-600/20">
-                  Lihat di Shopee
+                  Beli di Shopee
                   <svg class="w-3.5 h-3.5 transition-transform duration-300 group-hover/btn:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
                 </a>
                 <a href="https://www.tokopedia.com/redbox-official" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 border-2 border-charcoal text-charcoal px-7 py-3.5 text-xs font-bold tracking-[0.15em] uppercase rounded-xl hover:bg-charcoal hover:text-white transition-all duration-300">
-                  Lihat di Tokopedia
+                  Beli di Tokopedia
                 </a>
               </div>
             </div>
@@ -458,12 +542,21 @@
         <div class="lookbook-card group">
           <div class="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
             <div class="relative overflow-hidden rounded-2xl border border-charcoal/5 shadow-lg group-hover:shadow-2xl transition-shadow duration-500">
-              <img src="assets/img/categories/5.png" alt="Outerwear - REDBOX" class="w-full h-auto object-contain group-hover:scale-105 transition-transform duration-700" loading="lazy" />
-             
+              <img src="assets/img/categories/5.PNG" alt="Outerwear - REDBOX" class="w-full h-auto object-contain group-hover:scale-105 transition-transform duration-700" loading="lazy" />
+              <div class="absolute top-5 left-5 bg-redbox-600/90 backdrop-blur text-white text-[9px] tracking-[0.2em] uppercase px-4 py-2 rounded-lg font-semibold">Kategori</div>
+              <div class="absolute top-5 right-5 bg-charcoal text-white text-[9px] tracking-[0.15em] uppercase px-3.5 py-2 rounded-lg font-bold shadow-lg flex items-center gap-1.5">
+                <svg class="w-3 h-3 text-yellow-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                Favorit
+              </div>
             </div>
             <div class="lg:pl-6">
               <p class="text-redbox-600 text-xs tracking-[0.3em] uppercase font-semibold mb-4">Unisex · Anak & Remaja</p>
-              <h3 class="font-display text-2xl sm:text-3xl lg:text-4xl font-bold text-charcoal mb-5 leading-tight">Outerwear</h3>
+              <h3 class="font-display text-2xl sm:text-3xl lg:text-4xl font-bold text-charcoal mb-3 leading-tight">Outerwear</h3>
+              <div class="flex items-center gap-3 mb-5">
+                <span class="inline-flex items-center gap-1 text-xs font-semibold text-charcoal"><svg class="w-3.5 h-3.5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg> 4.9/5</span>
+                <span class="w-1 h-1 rounded-full bg-warmgray/40"></span>
+                <span class="text-xs text-warmgray font-medium">Terjual 980+</span>
+              </div>
               <p class="text-warmgray text-base sm:text-lg leading-relaxed mb-8">Your Ultimate Outerwear. Pilihan jaket kasual yang pas untuk bonceng motor bareng Ayah atau luaran keren saat remaja hang out. Tahan angin, waterproof, dan tetap stylish.</p>
               <div class="flex flex-wrap gap-2 mb-8">
                 <span class="tag-pill">Tahan Angin</span>
@@ -473,11 +566,11 @@
               </div>
               <div class="flex flex-col sm:flex-row gap-3">
                 <a href="https://shopee.co.id/redbox_officialstore" target="_blank" rel="noopener noreferrer" class="group/btn inline-flex items-center justify-center gap-2 bg-redbox-600 text-white px-7 py-3.5 text-xs font-bold tracking-[0.15em] uppercase rounded-xl hover:bg-redbox-700 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-redbox-600/20">
-                  Lihat di Shopee
+                  Beli di Shopee
                   <svg class="w-3.5 h-3.5 transition-transform duration-300 group-hover/btn:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
                 </a>
                 <a href="https://www.tokopedia.com/redbox-official" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 border-2 border-charcoal text-charcoal px-7 py-3.5 text-xs font-bold tracking-[0.15em] uppercase rounded-xl hover:bg-charcoal hover:text-white transition-all duration-300">
-                  Lihat di Tokopedia
+                  Beli di Tokopedia
                 </a>
               </div>
             </div>
@@ -525,6 +618,124 @@
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- SECTION: TESTIMONI PELANGGAN                 -->
+  <!-- ============================================ -->
+  <section class="py-24 sm:py-32 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <p class="text-redbox-600 text-xs tracking-[0.3em] uppercase font-semibold mb-3">Testimoni</p>
+        <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-charcoal mb-5">Kata Mereka yang Sudah Belanja</h2>
+        <div class="section-divider mt-8"></div>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="testi-card">
+          <div class="flex gap-1 mb-4">
+            <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <p class="text-charcoal/80 text-sm sm:text-base leading-relaxed mb-6">"Bahannya enak banget di kulit anak, jahitannya rapi. Sudah langganan beli buat anak saya yang masih SD, ukurannya pas sesuai size guide-nya."</p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-redbox-100 flex items-center justify-center font-display font-bold text-redbox-600">R</div>
+            <div>
+              <p class="text-sm font-semibold text-charcoal">Rina A.</p>
+              <p class="text-xs text-warmgray">Pembeli Shopee · Bandung</p>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="flex gap-1 mb-4">
+            <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <p class="text-charcoal/80 text-sm sm:text-base leading-relaxed mb-6">"Outerwear-nya juara, dipakai anak remaja saya tiap hangout sama temannya. Pengiriman cepat dan packing-nya aman banget."</p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-redbox-100 flex items-center justify-center font-display font-bold text-redbox-600">D</div>
+            <div>
+              <p class="text-sm font-semibold text-charcoal">Doni S.</p>
+              <p class="text-xs text-warmgray">Pembeli Tokopedia · Surabaya</p>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="flex gap-1 mb-4">
+            <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <p class="text-charcoal/80 text-sm sm:text-base leading-relaxed mb-6">"Modest wear-nya adem dipakai seharian, modelnya juga gak ketinggalan zaman. Anak saya sampai minta beli warna lain."</p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-redbox-100 flex items-center justify-center font-display font-bold text-redbox-600">S</div>
+            <div>
+              <p class="text-sm font-semibold text-charcoal">Siti M.</p>
+              <p class="text-xs text-warmgray">Pembeli Shopee · Jakarta</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- SECTION: FAQ                                 -->
+  <!-- ============================================ -->
+  <section class="py-24 sm:py-32 bg-cream">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <p class="text-redbox-600 text-xs tracking-[0.3em] uppercase font-semibold mb-3">FAQ</p>
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-charcoal mb-5">Pertanyaan yang Sering Ditanyakan</h2>
+        <div class="section-divider mt-8"></div>
+      </div>
+      <div class="space-y-3">
+        <details class="faq-item" open>
+          <summary>Bagaimana cara order produk REDBOX?</summary>
+          <p>Klik tombol "Belanja di Shopee" atau "Belanja di Tokopedia" di halaman ini, pilih produk yang kamu suka, lalu checkout langsung di aplikasi marketplace seperti biasa.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Bagaimana jika ukuran tidak pas?</summary>
+          <p>Gunakan fitur Size Guide kami untuk mendapat rekomendasi otomatis berdasarkan tinggi &amp; berat badan. Jika tetap tidak pas, hubungi admin toko via chat di Shopee/Tokopedia untuk proses tukar ukuran.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Berapa lama waktu pengiriman?</summary>
+          <p>Pesanan diproses same-day untuk order sebelum jam 3 sore, dengan estimasi sampai 2-5 hari kerja tergantung lokasi tujuan di seluruh Indonesia.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Apakah produk REDBOX original?</summary>
+          <p>Ya, 100% original dan diproduksi sendiri dengan kontrol kualitas ketat di setiap tahap produksi sebelum dikirim ke pelanggan.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- SECTION: FINAL CTA                           -->
+  <!-- ============================================ -->
+  <section class="relative py-20 sm:py-28 bg-charcoal overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-redbox-950/60 via-charcoal to-charcoal"></div>
+    <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-5 leading-tight">Jangan Sampai Kehabisan<br/>Koleksi Favoritmu</h2>
+      <p class="text-white/60 text-base sm:text-lg mb-10 max-w-xl mx-auto">Stok terbatas dan selalu cepat habis. Amankan ukuran &amp; warna favorit si kecil sekarang juga.</p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="https://shopee.co.id/redbox_officialstore" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-redbox-600 text-white px-9 py-4 text-sm font-bold tracking-[0.15em] uppercase rounded-xl hover:bg-redbox-500 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-redbox-600/30">
+          Belanja di Shopee
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        </a>
+        <a href="https://www.tokopedia.com/redbox-official" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-white text-charcoal px-9 py-4 text-sm font-bold tracking-[0.15em] uppercase rounded-xl hover:bg-white/90 transition-all duration-300 hover:-translate-y-1">
+          Belanja di Tokopedia
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        </a>
       </div>
     </div>
   </section>
@@ -927,7 +1138,7 @@
   <!-- ============================================ -->
   <!-- SIZE GUIDE INTRO BANNER (appears on load)    -->
   <!-- ============================================ -->
-  <div id="sizeGuideBanner" class="fixed bottom-24 right-4 sm:right-6 z-50 opacity-0 translate-y-4 pointer-events-none transition-all duration-500" style="max-width:300px;">
+  <div id="sizeGuideBanner" class="fixed bottom-40 lg:bottom-24 right-4 sm:right-6 z-50 opacity-0 translate-y-4 pointer-events-none transition-all duration-500" style="max-width:300px;">
     <div class="relative bg-white rounded-2xl shadow-2xl border border-charcoal/8 overflow-hidden">
       <div class="h-1 bg-gradient-to-r from-redbox-600 to-redbox-400 w-full"></div>
       <button onclick="dismissSizeBanner()" class="absolute top-2.5 right-2.5 w-6 h-6 flex items-center justify-center rounded-full bg-charcoal/5 hover:bg-charcoal/10 transition-colors z-10" aria-label="Tutup">
@@ -956,9 +1167,22 @@
   </div>
 
   <!-- ============================================ -->
+  <!-- STICKY MOBILE BUY BAR                        -->
+  <!-- ============================================ -->
+  <div class="lg:hidden fixed bottom-0 left-0 w-full z-50 bg-white border-t border-charcoal/10 shadow-[0_-8px_24px_rgba(0,0,0,0.08)] flex" style="padding-bottom: env(safe-area-inset-bottom);">
+    <a href="https://shopee.co.id/redbox_officialstore" target="_blank" rel="noopener noreferrer" class="flex-1 flex items-center justify-center gap-2 bg-redbox-600 text-white py-4 text-xs font-bold tracking-[0.1em] uppercase">
+      <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/></svg>
+      Shopee
+    </a>
+    <a href="https://www.tokopedia.com/redbox-official" target="_blank" rel="noopener noreferrer" class="flex-1 flex items-center justify-center gap-2 bg-charcoal text-white py-4 text-xs font-bold tracking-[0.1em] uppercase">
+      Tokopedia
+    </a>
+  </div>
+
+  <!-- ============================================ -->
   <!-- FLOATING: Size Guide Button (Enhanced FAB)   -->
   <!-- ============================================ -->
-  <div class="fixed bottom-6 right-4 sm:right-6 z-40">
+  <div class="fixed bottom-24 lg:bottom-6 right-4 sm:right-6 z-40">
     <span id="sizeFabPulse" class="absolute inset-0 rounded-2xl bg-redbox-400 animate-ping opacity-40"></span>
     <button id="sizeFab" onclick="openSizeGuide(); dismissSizeBanner();" class="relative bg-redbox-600 text-white px-5 py-3.5 rounded-2xl shadow-2xl shadow-redbox-600/40 text-[10px] font-bold tracking-[0.15em] uppercase hover:bg-redbox-700 transition-all duration-300 hover:-translate-y-1 hover:shadow-redbox-600/60 flex items-center gap-2.5" aria-label="Size Guide">
       <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
@@ -969,7 +1193,7 @@
   <!-- ============================================ -->
   <!-- FLOATING: Back to Top Button                 -->
   <!-- ============================================ -->
-  <button id="backToTopBtn" onclick="scrollToTop()" class="fixed bottom-6 left-4 sm:left-6 z-40 bg-white/90 backdrop-blur text-charcoal w-11 h-11 rounded-xl shadow-lg text-sm opacity-0 pointer-events-none transition-all duration-300 hover:bg-white hover:-translate-y-1 flex items-center justify-center border border-charcoal/5" aria-label="Kembali ke atas">
+  <button id="backToTopBtn" onclick="scrollToTop()" class="fixed bottom-24 lg:bottom-6 left-4 sm:left-6 z-40 bg-white/90 backdrop-blur text-charcoal w-11 h-11 rounded-xl shadow-lg text-sm opacity-0 pointer-events-none transition-all duration-300 hover:bg-white hover:-translate-y-1 flex items-center justify-center border border-charcoal/5" aria-label="Kembali ke atas">
     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/></svg>
   </button>
 
